@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小河的做饭教程</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        /* 左侧导航栏样式 */
+        .sidebar {
+            width: 250px;
+            background-color: #efff71;
+            color: green;
+            padding: 20px;
+            flex-shrink: 0; /* 防止导航栏缩小 */
+        }
+        
+        .sidebar h2 {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #34495e;
+        }
+        
+        .sidebar ul {
+            list-style: none;
+        }
+        
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+        
+        .sidebar a {
+            color: green;
+            text-decoration: none;
+            display: block;
+            padding: 8px 10px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .sidebar a:hover {
+            background-color: green;
+            color: #fff;
+        }
+        .dao li a{
+			color: black;
+		}
+		.lie{
+			position: fixed;//使导航栏跟着页面一起滚动
+		}
+        /* 右侧内容区样式 */
+        .content {
+            flex: 1;
+            padding: 20px;
+            background-color: #ecf0f1;
+        }
+        
+        .gallery-title {
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        /* 图片墙样式 */
+        .image-wall {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .image-card {
+            width: calc(33.333% - 10px); /* 三列布局 */
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+			height: 400px;
+			width: 800px;
+        }
+        .image-card p{
+			margin: 50px;
+		}
+		.image-title{
+			margin: 50px;
+		}
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .image-info {
+            padding: 10px;
+        }
+        
+        .image-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .image-desc {
+            font-size: 12px;
+            color: #7f8c8d;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            
+            .content {
+                margin-left: 0;
+            }
+            
+            .image-card {
+                width: calc(50% - 8px); /* 两列布局 */
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .image-card {
+                width: 100%; /* 单列布局 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 左侧导航栏 -->
+	<nav class="sidebar">
+		<ul class="dao">
+			<h2>导航菜单</h2>
+			<li><a href="home.html">首页</a></li>
+			<li><a href="我自己.html" target="_blank">我自己</a></li>
+			<li><a href="study.html" target="_blank" >学习过程</a></li>
+			<li><a href="作品.html" target="_blank" >作品</a></li>
+			<li><a href="今天吃什么呢？.html" target="_blank" >今天吃什么呢？</a></li>
+		</ul>
+		
+		<ul class="lie">
+			<h2>菜品</h2>
+			<li><a href="#sct1">空气炸锅鸡翅</a></li>
+			<li><a href="#sct2">糖醋排骨</a></li>
+			<li><a href="#sct3">辣椒炒秋葵</a></li>
+			<li><a href="#sct4">炒虾</a></li>
+			<li><a href="#sct5">红烧肉</a></li>
+			<li><a href="#sct6">蒜蓉生蚝</a></li>
+			<li><a href="#sct7">紫菜金针菇虾滑汤</a></li>
+			<li><a href="#sct8">炒荷兰豆</a></li>
+			<li><a href="#sct9">辣椒炒鱼饼</a></li>
+			<li><a href="#sct10">螺蛳粉</a></li>
+		</ul>
+		
+	</nav>
+    
+    <!-- 右侧内容区 -->
+		<div class="content">
+		<h1 class="gallery-title">教程</h1>
+			
+        <!-- 墙 -->
+			<div class="image-wall">
+            <!-- 1 -->
+				<div class="image-card" id="sct1">
+					<p>1.腌制鸡翅：鸡翅洗净划刀，加生抽、料酒、蚝油、蒜末、黑胡椒抓匀腌30分钟。</p>
+					<p>2.预热炸锅：空气炸锅200℃预热5分钟。</p>
+					<p>3.烘烤：鸡翅平铺炸篮，200℃烤10分钟，翻面再烤8分钟至金黄酥脆即可。</p>
+					<div class="image-title">空气炸锅鸡翅</div>
+				</div>
+				
+			<!-- 2 -->
+			<div class="image-card" id="sct2">
+				<p>1.焯水：排骨冷水下锅，加料酒、姜片焯水后捞出。</p>
+				<p>2.煎香：锅中放油，煎排骨至微黄，加姜蒜炒香。</p>
+				<p>3.调味：加1勺料酒、2勺生抽、3勺醋、4勺糖、清水没过排骨，小火焖30分钟。</p>
+				<p>4.收汁：大火收汁，撒芝麻出锅。</p>
+				<div class="image-title">糖醋排骨</div>
+			</div>
+			<!-- 3 -->
+			<div class="image-card" id="sct3">
+				<p>1.备料：秋葵洗净切斜段，辣椒切圈，蒜切片。</p>
+				<p>2.焯水：秋葵沸水焯1分钟（可去涩），捞出沥干。</p>
+				<p>3.爆炒：热油爆香蒜片、辣椒，下秋葵大火翻炒。</p>
+				<p>4.调味：加盐、生抽、少许糖，炒匀出锅。</p>
+				<div class="image-title">辣椒炒秋葵</div>
+			</div>
+			<!-- 4 -->
+			<div class="image-card" id="sct4">
+				<p>1.处理虾：鲜虾去头去壳留尾，开背去虾线，加料酒、盐、淀粉腌10分钟。</p>
+				<p>2.爆香：热油爆香姜蒜末，加少许干辣椒炒香。</p>
+				<p>3.炒虾：倒入虾仁大火翻炒至变色。</p>
+				<p>4.调味：淋1勺生抽、半勺糖，撒葱花翻匀出锅。</p>
+				<div class="image-title">炒虾</div>
+			</div>
+			<!-- 5 -->
+			<div class="image-card" id="sct5">
+				<p>1.焯水：五花肉切块，冷水下锅加料酒、姜片焯烫后捞出。</p>
+				<p>2.炒糖色：热油放冰糖炒至焦糖色，下肉块翻炒上色。</p>
+				<p>3.炖煮：加生抽、老抽、八角、香叶、热水，小火炖40分钟。</p>
+				<p>4.收汁：大火收汁，撒葱花出锅。</p>
+				<div class="image-title">红烧肉</div>
+			</div>
+			<!-- 6 -->
+			<div class="image-card" id="sct6">
+				<p>1.处理生蚝：生蚝刷净外壳，撬开取肉，冲洗后放回半壳中。</p>
+				<p>2.炒蒜蓉：热油爆香蒜末、小米辣，加生抽、蚝油、糖调成酱汁。</p>
+				<p>3.蒸制：将蒜蓉酱铺在生蚝上，水沸后蒸5分钟。</p>
+				<p>4.淋油：出锅撒葱花，淋热油激香。</p>
+				<div class="image-title">蒜蓉生蚝</div>
+			</div>
+			<!-- 7 -->
+			<div class="image-card" id="sct7">
+				<p>1.备料：虾滑挤成丸子，金针菇去根撕小朵，紫菜撕块。</p>
+				<p>2.煮汤：水沸后下虾滑煮至浮起，加金针菇、紫菜煮2分钟。</p>
+				<p>3.调味：加盐、胡椒粉、香油，撒葱花出锅。</p>
+				<div class="image-title">紫菜金针菇虾滑汤</div>
+			</div>
+			<!-- 8 -->
+			<div class="image-card" id="sct8">
+				<p>1.备料：荷兰豆去筋洗净，蒜切片。</p>
+				<p>2.焯水：沸水加盐、油，焯荷兰豆30秒捞出。</p>
+				<p>3.爆炒：热油爆香蒜片，下荷兰豆大火翻炒。</p>
+				<p>4.调味：加盐、鸡精，炒匀出锅。</p>
+				<div class="image-title">炒荷兰豆</div>
+			</div>
+			<!-- 9 -->
+			<div class="image-card" id="sct9">
+				<p>1.备料：鱼饼切片，青红椒切块，蒜末、姜丝备用。</p>
+				<p>2.煎香：热油将鱼饼煎至两面微黄盛出。</p>
+				<p>3.爆炒：余油爆香姜蒜，加辣椒炒至断生。</p>
+				<p>4.合炒：倒回鱼饼，加生抽、蚝油、糖，大火炒匀出锅。</p>
+				<div class="image-title">辣椒炒鱼饼</div>
+			</div>
+			<!-- 10 -->
+			<div class="image-card" id="sct10">
+				<p>1.煮粉：干米粉冷水下锅煮10分钟，捞出过凉备用。</p>
+				<p>2.调汤：锅中加500ml水煮沸，倒入汤包、酸笋、酸豆角煮开。</p>
+				<p>3.加料：放入米粉、腐竹、花生煮1分钟。</p>
+				<p>4.调味：根据口味加辣油、醋，拌匀开吃。</p>
+				<div class="image-title">螺蛳粉</div>
+			</div>
+			</div>
+		</div>
+	<script>
+		const const shiwu = [
+							{src:"images/菜10.jpg",name:"空气炸锅鸡翅"},
+							{src:"images/菜5.jpg",name:"牛柳炒洋葱"},
+							{src:"images/菜3.jpg",name:"蒜苗炒肉"},
+							{src:"images/菜1.jpg",name:"炒虾"},
+							{src:"images/菜7.jpg",name:"红烧肉"},
+							{src:"images/菜1.jpg",name:"蒜蓉生蚝"},
+							{src:"images/菜4.jpg",name:"紫菜金针菇虾滑汤"},
+							{src:"images/菜10.jpg",name:"炒荷兰豆"},
+							{src:"images/菜10.jpg",name:"辣椒炒鱼饼"},
+							{src:"images/菜8.jpg",name:"螺蛳粉"}
+						]
+	</script>
+</body>
+</html>

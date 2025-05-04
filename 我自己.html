@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myself</title>
+</head>
+<style>
+	/* 重置默认样式 */
+	* {
+	    margin: 0;
+	    padding: 0;
+	    box-sizing: border-box;
+	}
+	
+	body {
+		background-color: lightyellow;
+	    font-family: 'Arial', sans-serif;
+	    line-height: 1.6;
+	    color: #333;
+	}
+	
+	/* 主容器使用flex布局 */
+	.container {
+	    display: flex;
+	    min-height: 100vh; /* 确保容器至少和视口一样高 */
+	}
+	
+	/* 左侧导航栏样式 */
+	.sidebar {
+	    width: 250px;
+	    background-color: #efff71;
+	    color: green;
+	    padding: 20px;
+	    flex-shrink: 0; /* 防止导航栏缩小 */
+	}
+	
+	.sidebar h2 {
+	    margin-bottom: 20px;
+	    padding-bottom: 10px;
+	    border-bottom: 1px solid #34495e;
+	}
+	
+	.sidebar ul {
+	    list-style: none;
+	}
+	
+	.sidebar li {
+	    margin-bottom: 10px;
+	}
+	
+	.sidebar a {
+	    color: green;
+	    text-decoration: none;
+	    display: block;
+	    padding: 8px 10px;
+	    border-radius: 4px;
+	    transition: all 0.3s ease;
+	}
+	
+	.sidebar a:hover {
+	    background-color: green;
+	    color: #fff;
+	}
+	.ren{
+		width: 170px;
+		height: 120px;
+	}
+	/* 右侧内容区样式 */
+	.content {
+	    flex-grow: 1; /* 填充剩余空间 */
+	    padding: 80px;
+	    background-color: lightyellow;
+	}
+	
+	.content h1 {
+	    margin-bottom: 20px;
+	    color: #2c3e50;
+	}
+	
+	.content p {
+	    margin-bottom: 15px;
+	}
+	
+	h1{
+		font-family: '幼圆';
+		font-size: 30px;
+	}
+	.xd{
+		
+		list-style: none;
+	}
+	.xd a{
+		color: ;
+		margin-left: 20px;
+		text-decoration: none;
+		margin-left: -10px;
+	}
+
+</style>
+<body>
+    <div class="container">
+        <!-- 左侧导航栏 -->
+        <nav class="sidebar">
+            <h2>我的基本信息</h2>
+            <ul>
+				<li><img src="images/人物.jpg" alt="" class="ren" /></li>
+                <li>我是何雪滢</li>
+                <li>今年18岁</li>
+                <li>现就读于中策职业学校钱塘学校</li>
+                <li>专业是大数据技术与运用</li>
+				<li>我的爱好是拍摄，做饭，阅读……</li>
+            </ul>
+			<ul class="xd">
+			    <li><a href="home.html">首页</a></li>
+			    <li><a href="学习过程.html" target="_blank" >学习过程</a></li>
+			    <li><a href="作品.html" target="_blank" >作品</a></li>
+				<li><a href="今天吃什么呢？.html" target="_blank" >今天吃什么呢？</a></li>
+			</ul>
+        </nav>
+        
+        <!-- 右侧内容区 -->
+        <main class="content">
+			<p>我是何雪滢，在生活中，我认为吃饭时一件很开心的事情，当我品尝到美食时，感觉能冲淡很多疲惫。</p>
+			<p>在家时，如果家长不在家，我总是自己做饭。</p>
+			<p>我觉得做饭很有意思，先买菜、洗菜、切菜，再炒、煮、蒸、炸、烤。</p>
+			<p>就可以做出很多有滋有味的食物。</p>
+			<p>做好后，我的爸爸妈妈也会品尝。</p>
+			<p>现在我想尝试做一下甜品，但是几乎都失败了，但我还是很喜欢这种做饭的过程！</p>
+        </main>
+    </div>
+</body>
+</html>
